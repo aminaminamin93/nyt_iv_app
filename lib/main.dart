@@ -1,7 +1,5 @@
 import 'dart:async';
-import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:iv_nyt_app/search.dart';
@@ -67,13 +65,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _getCurrentLocation() async {
     Position position = await _determinePosition();
-    if(position != null) {
-      setState(() {
-        myLatitude = position.latitude;
-        myLongitude = position.longitude;
-      });
-    }
-
+    setState(() {
+      myLatitude = position.latitude;
+      myLongitude = position.longitude;
+    });
   }
 
   @override
