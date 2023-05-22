@@ -8,7 +8,7 @@ class BaseNetwork {
 
     return Dio(
       BaseOptions(
-          baseUrl: "http://192.168.227.1:3000",
+          baseUrl: "https://api.nytimes.com",
           headers: header,
           contentType: Headers.formUrlEncodedContentType, //ContentType.json,
           followRedirects: false,
